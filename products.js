@@ -27,14 +27,23 @@ const produtos = [
 function listar() {
     produtos.forEach(p => {
         console.log(p)
-    })
+    });
 }
 
 function  listar_por_categoria(categoria) {
     produtos.forEach(p => {
         if(p.categoria.toLocaleLowerCase() === categoria.toLocaleLowerCase())
             console.log(p)
-    })
+    });
 }
 
-listar_por_categoria("ELETRÔNICO");
+//listar_por_categoria("ELETRÔNICO");
+
+function listar_por_valor(min, max) {
+    produtos.forEach(p => {
+        if(p.valor >= min && p.valor <= max)
+            console.log(p)
+    });
+}
+
+listar_por_valor(500, 2000);
