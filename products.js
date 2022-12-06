@@ -30,5 +30,11 @@ function listar() {
     })
 }
 
+function  listar_por_categoria(categoria) {
+    produtos.forEach(p => {
+        if(p.categoria.toLocaleLowerCase() === categoria.toLocaleLowerCase())
+            console.log(p)
+    })
+}
 
-
+listar_por_categoria("ELETRÔNICO");
